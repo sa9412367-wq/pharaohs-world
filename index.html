@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharaohs World</title>
+    <link rel="icon" href="images/logo.jpg">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body dir="rtl">
+
+<!-- Start header -->
+<header>
+    <!-- style="background-color: rgba(0, 183, 255, 0.694);" -->
+    <nav class="navbar navbar-expand-sm navbar-dark  fixed-top" >
+        <div class="container">
+            <a class="navbar-brand logo-111" href="javascript:void(0)"> Pharaohs World </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                <a class="nav-link text-light" href="#">الرئيسية</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link text-light" href="#linkss">روابط</a>
+                </li>
+                <div class="dropdown">
+                    <button type="button" class="btn  text-light dropdown-toggle" data-bs-toggle="dropdown">
+                        الرحلات
+                    </button>
+                    <ul class="dropdown-menu mt-2" style="background: -webkit-linear-gradient(45deg , gold , black);">
+                        <li><a class="dropdown-item text-dark" href="#demo">مصر</a></li>
+                        <li><a class="dropdown-item text-dark" href="#accordion">الفراعنه</a></li>
+                        <li><a class="dropdown-item text-dark" href="#oksor">الاقصر</a></li>
+                    </ul>
+                </div>
+                <li class="nav-item">
+                <a class="nav-link text-light" href="javascript:void(0)">عنا</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <!-- <input class="form-control me-2" type="text" placeholder="بحث"> -->
+                 <!*-- ///////////////////.......search......///////////////////////////// -->
+
+            <div class="grid"></div>
+                <div id="poda">
+                    <div class="glow"></div>
+                    <div class="darkBorderBg"></div>
+                    <div class="darkBorderBg"></div>
+                    <div class="darkBorderBg"></div>
+                    <div class="white"></div>
+                    <div class="border"></div>
+
+                <div id="main">
+                    <input placeholder="بحث..." type="text" name="text" class="input" />
+                    <div id="input-mask"></div>
+                    <div id="pink-mask"></div>
+                    <div class="filterBorder"></div>
+                    <div id="filter-icon">
+                    <svg
+                        preserveAspectRatio="none"
+                        height="27"
+                        width="27"
+                        viewBox="4.8 4.56 14.832 15.408"
+                        fill="none"
+                        >
+                        <path
+                            d="M8.16 6.65002H15.83C16.47 6.65002 16.99 7.17002 16.99 7.81002V9.09002C16.99 9.56002 16.7 10.14 16.41 10.43L13.91 12.64C13.56 12.93 13.33 13.51 13.33 13.98V16.48C13.33 16.83 13.1 17.29 12.81 17.47L12 17.98C11.24 18.45 10.2 17.92 10.2 16.99V13.91C10.2 13.5 9.97 12.98 9.73 12.69L7.52 10.36C7.23 10.08 7 9.55002 7 9.20002V7.87002C7 7.17002 7.52 6.65002 8.16 6.65002Z"
+                            stroke="#d6d6e6"
+                            stroke-width="1"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        ></path>
+                    </svg>
+                    </div>
+                    <div id="search-icon">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke-linejoin="round"
+                        stroke-linecap="round"
+                        height="24"
+                        fill="none"
+                        class="feather feather-search"
+                    >
+                        <circle stroke="url(#search)" r="8" cy="11" cx="11"></circle>
+                        <line
+                            stroke="url(#searchl)"
+                            y2="16.65"
+                            y1="22"
+                            x2="16.65"
+                            x1="22"
+                        ></line>
+                        <defs>
+                        <linearGradient gradientTransform="rotate(50)" id="search">
+                            <stop stop-color="#f8e7f8" offset="0%"></stop>
+                            <stop stop-color="#b6a9b7" offset="50%"></stop>
+                            </linearGradient>
+                            <linearGradient id="searchl">
+                            <stop stop-color="#b6a9b7" offset="0%"></stop>
+                            <stop stop-color="#837484" offset="50%"></stop>
+                        </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+                 <!-- /////////////////////////////////////////////////////////////////////////////// -->
+                <button class="btn btn-outline-light  mx-1" type="button">بحث</button>
+            </form>
+
+            <!-- Button to Open the Modal -->
+    <button type="button" class="btn btn-outline-light text-warning me-2" data-bs-toggle="modal" data-bs-target="#myModal">
+        تسجيل الدخول
+        </button>
+    
+        
+    
+        </div>
+        </div>
+    </nav>
+    <!-- The Modal -->
+    <div class="modal mt-5" id="myModal">
+        <div class="modal-dialog">
+        <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header bg-primary model22">
+            <h4 class="modal-title text-light">تسجيل الدخول</h4>
+            <button type="button" style="margin-right: 290px;" class="btn-close bg-light " data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body">
+            <form action="#">
+                <label for="#" class="py-1">البريد الالكتروني:</label><br>
+                <input size="57" class="email" type="email" placeholder="البريد الالكتروني" required>
+                <label for="#" class="pt-3 pb-1">كلمه المرور:</label><br>
+                <input size="57" class="email" type="password" placeholder="كلمه المرور..." required>
+                <a href="#">نسيت كلمه المرور؟</a> <br>
+                <label for="#" class="pt-3">تذكرني</label><input class="checkbox" type="checkbox"> <br>
+                <button type="submit" class="btn btn-warning text-light btn-block mt-2 w-100 model22">تسجيل الدخول</button>
+                <hr>
+                <label for="#" class="pt-2 center">ليس لديك حساب؟</label>
+                <label for="#"><a href="#">انشاء حساب جديد</a></label>
+            </form>
+        </div>
+        </div>
+    </div>
+</div>
+</header>
+<!-- End header -->
+<!?-- ///////////////////////////////.................main.................//////////////////////// -->
+<!-- Start main -->
+    <main>
+        <div class="overlay">
+        <div class="content">
+            <h2 class="">الفراعنه</h2>
+            <p class="text-light">قضينا وقتنا رائعا في مصر!</p>
+            <button type="button" class="btn btn-outline-warning w-50">زورونا</button>
+        </div><!-- /content -->
+        <div class="info d-flex flex-column">
+            <a href="https://www.facebook.com/" target="_blank"><button type="button" class="btn btn-dark text-light mb-3 px-3 fs-5 btn-11">f</button> </a>
+            <a href="https://www.linkedin.com/" target="_blank"><button type="button" class="btn btn-dark text-light mb-3 fs-5 btn-11 btn-12">in</button></a> 
+            <a href="#"><button type="button" class="btn btn-dark text-light fs-5 btn-11 btn-13">@</button></a>
+        </div><!-- /info -->
+    </div><!-- /overlay -->
+    </main>
+<!-- End main -->
+<!-- /////////////////////////////////////////////////////////////////////////////////////////// -->
+<div class="container">
+    <div class="text-center m-5">
+        <h3>learn more</h3>
+        <p>اكتشف مصر</p>
+    </div>
+
+<!-- Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel" style="box-shadow: 1px 1px 20px rgb(155, 153, 37); border-radius: 10px;">
+
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    </div>
+    
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner" >
+        <div class="carousel-item active">
+            <div class="overlay-25"></div>
+            <img style="border-radius: 10px; height: 550px;" src="images/images1.jpg" alt="Los Angeles" class="d-block w-100">
+            <div class="carousel-caption">
+                <h3>اهرمات الجيزه</h3>
+                <p>ثلاث اهرامات شامخه تحكي قصه حضاره لا تزال تبهر العالم بعظمتها.</p>
+            <button type="button" class="btn btn-dark" style="background: -webkit-linear-gradient(45deg ,black , gold);">اكتشف المزيد</button> 
+            </div>
+        </div>
+    <div class="carousel-item">
+        <div class="overlay-25"></div>
+        <img style="border-radius: 10px; height: 550px;" src="images/images2.jpg" alt="Chicago" class="d-block w-100">
+        <div class="carousel-caption">
+            <h3>بوابه الخلود</h3>
+            <p>رحله عبر الزمن بين اعمده الكرنك وصمت الكباش</p>
+            <button type="button" class="btn btn-dark" style="background: -webkit-linear-gradient(45deg , black , gold);">اكتشف المزيد</button> 
+        </div> 
+    </div>
+    <div class="carousel-item">
+        <div class="overlay-25"></div>
+        <img style="border-radius: 10px; height: 550px;" src="images/images3.jpg" alt="New York" class="d-block w-100">
+        <div class="carousel-caption">
+            <h3>متحف الحضاره المصريه</h3>
+            <p>متحف يعرض تاريخ مصر من العصور القديمه حتي الحديثه.</p>
+            <button type="button" class="btn btn-dark" style="background: -webkit-linear-gradient(180deg ,black , gold);">اكتشف المزيد</button> 
+        </div>  
+    </div>
+    </div>
+    
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+<!-- /////////////////////////////////////////////////////////////////////// -->
+<div class="card-box">
+    <div class="container mt-5">
+        <div class="row g-4"> <!-- g-4 عشان فيه مسافة بين الكروت -->
+        
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card img-fluid">
+            <img src="images/images6.jpg" class="card-img-top img-clip"  style="height:400px; "  alt="Card image">
+            <div class="card-img-overlay d-flex flex-column justify-content-end align-items-center">
+                <h4 class="card-title text-white">توت عنخ امون</h4>
+                <p class="card-text text-white">فرعون مصري شاب, كنوز مذهله.</p>
+                <a href="#" class="btn btn-dark btn1" style="background: -webkit-linear-gradient(180deg ,black , gold);">اعرف أكثر</a>
+            </div>
+            </div>
+        </div>
+    <!-- ---------------------------------------------------------- -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card img-fluid">
+            <img src="images/images4.jpg" class="card-img-top img-clip2" style="height:400px; " alt="Card image">
+    
+            <div class="card-img-overlay d-flex flex-column justify-content-end align-items-center">
+                <h4 class="card-title text-white">نفرتيتي</h4>
+                <p class="card-text text-white">ملكة جميلة، غامضة التأثير.</p>
+                <a href="#" class="btn btn-dark btn-wh btn1" style="background: -webkit-linear-gradient(180deg ,black , gold);">اعرف أكثر</a>
+            </div>
+            </div>
+        </div>
+    <!-- --------------------------------------------- -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card img-fluid">
+            <img src="images/images5.jpg" class="card-img-top img-clip2"   style="height:400px; " alt="Card image">
+            <div class="card-img-overlay d-flex flex-column justify-content-end align-items-center">
+                <h4 class="card-title text-white">اخناتون</h4>
+                <p class="card-text text-white">فرعون التوحيد، إصلاح ديني.</p>
+                <a href="#" class="btn btn-dark btn-wh btn1" style="background: -webkit-linear-gradient(180deg ,black , gold);">اعرف أكثر</a>
+            </div>
+            </div>
+        </div>
+    
+    </div> <!-- row -->
+    
+    </div> <!-- container -->
+    </div><!-- card-box -->
+
+
+
+</div>
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<!-- style="margin: 160px 260px; position: relative; top:170px;" -->
+
+    <section class="section3" id="accordion">
+        <div class="overlay"></div>
+        <div class="container">
+        <div id="accordion" class="accordion-box">
+
+            <div class="card border-light text-light bg-transparent">
+                <div class="card-header box-sho">
+                <a class="btn text-light" data-bs-toggle="collapse" href="#collapseOne">
+                    Secrets of the Pharaohs #1
+                </a>
+                </div>
+            <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+                <div class="card-body border-top border-light">
+                    Discover the hidden secrets of temples 🏛, <span class="text-danger"> mysterious</span> rituals 🕯, and the beliefs that shaped one of the greatest civilizations in history.                </div>
+            </div>
+            </div>
+        
+            <div class="card border-light text-light bg-transparent">
+                <div class="card-header box-sho">
+                <a class="collapsed btn text-light" data-bs-toggle="collapse" href="#collapseTwo">
+                    Live of the Kings #2
+                </a>
+                </div>
+            <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+                <div class="card-body border-top border-light">
+                    Learn about the daily life of the <span class="text-danger"> pharaohs </span>👑, how they ruled the land, their throne battles ⚔, and the secrets of their majestic palaces.                </div>
+                </div>
+            </div>
+        
+            <div class="card border-light text-light bg-transparent">
+                <div class="card-header box-sho">
+                <a class="collapsed btn text-light" data-bs-toggle="collapse" href="#collapseThree">
+                    Ancient Egypt Treasure #3
+                </a>
+                </div>
+            <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+                <div class="card-body border-top border-light">
+                    Take a journey through time to witness golden <span class="text-danger"> treasures </span>✨, ancient statues, and stunning royal tombs ⚱ buried deep in history.                </div>
+            </div>
+            </div>
+        
+        </div>
+
+        </div>
+    </section>
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <section class="section4">
+        <div class="container">
+            <div class="text-center m-5">
+                <h3 class="main-title">فريق العمل</h3>
+            </div>
+
+            <div class="card-work">
+                <div class="container mt-5">
+                    <div class="row g-4"> <!-- g-4 عشان فيه مسافة بين الكروت -->
+                        <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card img-fluid">
+                            <div class="overlay"></div>
+                        <img src="images/images17.jpg" class="card-img-top img-work"  style="height:400px; box-shadow: 1px 1px 5px black;" alt="card images">
+                        <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center z-1" style="margin-top:110px;">
+                            <h4 class="card-title text-white">
+                                <img src="images/ahmed.jpg" style="border-radius: 50%;" width="100" alt="">
+                            </h4>
+                            <h3 class="card-text text-white"> م.احمداسامة </h3>
+                            <p class="card-text text-info"> م.برمجه</p>
+                            <p class="card-text text-dark"> 10 سبتمير 2026 </p>
+                        </div>
+                        </div>
+                    </div>
+                <!-- ---------------------------------------------------------- -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card img-fluid">
+                            <!-- <div class="overlay"></div> -->
+                        <img src="images/images18.jpg" class="card-img-top img-work" style="height:400px; box-shadow: 1px 1px 5px black;" alt="card images">
+                        <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center z-1" style="margin-top: 110px;">
+                            <h4 class="card-title text-white">
+                                <img src="images/shahd.jpg" style="border-radius: 50%;" width="100" alt="">
+                            </h4>
+                            <h3 class="card-text text-white"> م.شهد علي</h3>
+                            <p class="card-text text-info">م. تطوير ويب 👨‍💻</p>
+                            <p class="card-text text-dark"> 15 سبتمير 2026 </p>
+                        </div>
+                        </div>
+                    </div>
+                <!-- ---------------------------------------------------------- -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card img-fluid">
+                            <!-- <div class="overlay"></div> -->
+                        <img src="images/images19.jpg" class="card-img-top img-work"  style="height:400px;box-shadow: 1px 1px 5px black"; alt="card images">
+                        <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center z-1" style="margin-top: 110px;">
+                            <h4 class="card-title text-white">
+                                <img src="images/mahmoud.jpg" style="border-radius: 50%;"  width="100" alt="">
+                            </h4>
+                            <h3 class="card-text text-white">م.محمود اسامة</h3>
+                            <p class="card-text text-info">م.الكترونيات</p>
+                            <p class="card-text text-dark"> 20 سبتمير 2026 </p>
+                        </div>
+                        </div>
+                    </div>
+                <!-- ---------------------------------------------------------- -->
+                </div> <!-- row -->
+                
+                </div> <!-- container -->
+                </div><!-- card-box -->
+            
+        </div>
+    </section>
+
+    <!-- ///////////////////////////////////////////////////////////////////////////////////// -->
+
+
+    <section class="section5" id="oksor">
+        <div class="container">
+            <div class="text-center m-5">
+                <h3 class="main-title">احدث الحلقات</h3>
+            </div>
+
+            
+            <div class="card mb-3 bg-light card10" style="border-left: 5px solid rgba(255, 217, 0, 0.703); border-radius: 5px 5px 200px 5px; box-shadow: 1px 1px 5px black; cursor: pointer; margin-top: -20px;">
+                <div class="row g-0">
+                    <div class="col-md-4 col-4">
+                        <img style="border-radius: 0px 0px 200px 0px; height: 250px;" src="images/images8.jpg" width="300" class="img-fluid rounded-start" alt="...">
+                    </div>
+                <div class="col-md-8 col-8">
+                    <div class="card-body">
+                        <h5 class="card-title">اكتشف عظمه رمسيس الثاني.</h5>
+                        <p class="card-text" style="color: rgba(0, 0, 0, 0.308);">الاتنين, 25مايو 2025</p>
+                        <p class="card-text"><small class="text-body-secondary">انطلق في رحلة عبر التاريخ ⏳ لتتعرف على أسرار تمثال رمسيس الثاني 👑، أحد أعظم ملوك مصر القديمة، الذي لا يزال يروي حكاية المجد والقوة الفرعونية 🏺.</small></p>
+                        <div class="d-flex flex-nowrap">
+                            <button type="button" class="btn btn-dark mt-3 btn-sm">بودكاسات</button>
+                        <button type="button" class="btn btn-secondary mt-3 mx-3 btn-sm">55 دقيقه</button>
+                        <button type="button" class="btn btn-warning mt-3 btn-sm">استمع الان</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- /////////////////////////////////////////////////////////////////////////////////////// -->
+            <div class="card mb-3 bg-light card10" style="border-left: 5px solid rgba(255, 217, 0, 0.703); border-radius: 5px 5px 200px 5px; box-shadow: 1px 1px 5px black; cursor: pointer;">
+                <div class="row g-0">
+                    <div class="col-md-4 col-4">
+                        <img style="border-radius: 0px 0px 200px 0px; height: 250px;" src="images/images9.jpg" width="300" class="img-fluid rounded-start" alt="...">
+                    </div>
+                <div class="col-md-8 col-8">
+                    <div class="card-body">
+                        <h5 class="card-title">اسرار الاهرامات العظيمة.</h5>
+                        <p class="card-text" style="color: rgba(0, 0, 0, 0.308);">الاتنين, 25مايو 2025</p>
+                        <p class="card-text"><small class="text-body-secondary">اكتشف روعة الهندسة الفرعونية في بناء الأهرامات 🏜، أعجوبة العالم القديم التي لا تزال تبهر العلماء حتى اليوم، وتحمل في أحجارها قصص الخلود والغموض ⛩.</small></p>
+                        <div class="d-flex flex-nowrap">
+                            <button type="button" class="btn btn-dark mt-3 btn-sm">بودكاسات</button>
+                        <button type="button" class="btn btn-secondary mt-3 mx-3 btn-sm">55 دقيقه</button>
+                        <button type="button" class="btn btn-warning mt-3 btn-sm">استمع الان</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- /////////////////////////////////////////////////////////////////////////////////////// -->
+            <div class="card mb-3 bg-light card10" style="border-left: 5px solid rgba(255, 217, 0, 0.703); border-radius: 5px 5px 200px 5px; box-shadow: 1px 1px 5px black; cursor: pointer;">
+                <div class="row g-0">
+                    <div class="col-md-4 col-4">
+                        <img style="border-radius: 0px 0px 200px 0px; height: 300px;" src="images/images10.jpg" width="300" class="img-fluid rounded-start" alt="...">
+                    </div>
+                <div class="col-md-8 col-8">
+                    <div class="card-body">
+                        <h5 class="card-title">خريطه مصر الفرعونيه القديمه.</h5>
+                        <p class="card-text" style="color: rgba(0, 0, 0, 0.308);">الاتنين, 25مايو 2025</p>
+                        <p class="card-text"><small class="text-body-secondary">اكتشف سحر الجغرافيا الفرعونية 🏺، حيث كانت الخرائط ترسم ملامح المعابد المقدسة، والمدن النابضة بالحياة، والنيل الخالد الذي كان شريان الحضارة 🌊. في كل خط من خطوطها أسرار عن كيف رأى المصري القديم عالمه وحدوده واتصاله بالكون ✨🗺.
+                            وكما نُقش في أحد النصوص القديمة: "مصر هي قلب الأرض، والنيل روحها التي لا تموت."</small></p>
+                        <div class="d-flex flex-nowrap">
+                            <button type="button" class="btn btn-dark mt-3 btn-sm">بودكاسات</button>
+                        <button type="button" class="btn btn-secondary mt-3 mx-3 btn-sm">55 دقيقه</button>
+                        <button type="button" class="btn btn-warning mt-3 btn-sm">استمع الان</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<section class="section6" style="margin-top: 100px;" id="linkss">
+    <div class="coll-cairo">
+        <div class="text-center m-5">
+            <h3 class="main-title">تواصل معنا</h3>
+        </div>
+        <div class="container">
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-3 card-custom" style="cursor: pointer;">
+                <div class="card w-100" style="box-shadow: 1px 1px 10px black;">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                <div class="card-body d-flex align-items-center">
+                    <img src="images/images11.jpg" alt="Card image" style="width: 50px; height: 50px; margin-right: 8px; border-radius: 5px;">
+                    <h5 class="card-title mb-2 mx-3">تابعنا على تويتر</h5>
+                </div>
+                </div>
+            </div><!-- col -->
+            <!-- /////////////////////////////////////////////////////////// -->
+            <div class="col-12 col-md-6 col-lg-3 card-custom" style="cursor: pointer;">
+                <div class="card w-100" style="box-shadow: 1px 1px 10px green;">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                <div class="card-body d-flex align-items-center">
+                    <img src="images/images12.jpg" alt="Card image" style="width: 50px; height: 50px; margin-right: 8px; border-radius: 5px;">
+                    <h5 class="card-title mb-2 mx-3">راسلنا علي واتساب</h5>
+                </div>
+                </div>
+            </div><!-- col -->
+            <!-- /////////////////////////////////////////////////////////// -->
+            <div class="col-12 col-md-6 col-lg-3 card-custom" style="cursor: pointer;">
+                <div class="card w-100" style="box-shadow: 1px 1px 10px blue;">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                <div class="card-body d-flex align-items-center">
+                    <img src="images/images13.jpg" alt="Card image" style="width: 50px; height: 50px; margin-right: 8px; border-radius: 5px;">
+                    <h5 class="card-title mb-2 mx-3">تابعنا على لينكد إن</h5>
+                </div>
+                </div>
+            </div><!-- col -->
+            <!-- ///////////////////////////////////////////////////////////// -->
+            <div class="col-12 col-md-6 col-lg-3 card-custom" style="cursor: pointer;">
+                <div class="card w-100" style="box-shadow: 1px 1px 10px #e1306c;">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                <div class="card-body d-flex align-items-center">
+                    <img src="images/images14.jpg" alt="Card image" style="width: 50px; height: 50px; margin-right: 8px; border-radius: 5px;">
+                    <h5 class="card-title mb-1 mx-3">تابعنا على  انستجرام</h5>
+                </div>
+                </div>
+            </div><!-- col -->
+        </div><!-- row -->
+        
+        </div><!-- container -->
+    </div><!-- coll-cair -->
+        <!-- end coll-cairo -->
+        </section>
+
+    <a class="out" href="#"><i class="fa-solid fa-house-crack fa-bounce"></i></a>
+
+    <!?-- /////////////////////////////////........Footer..........//////////////////////////////////// -->
+
+
+        
+<!-- Start Footer -->
+    <footer class="text-center pb-2 bg-info " style="margin-top: 100px;">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card" style="width: 400px;">
+                        <div class="card-body d-flex align-items-center">
+                            <a href="#"><img src="images/images15.jpg" alt="Card image" style="width: 80px; height: 80px; object-fit: cover; margin-right: 97px; margin-left: 10px;" class="rounded-circle"></a>
+                            <h4 class="card-title mb-0 f-logo"> شركة الفراعنه</h4>
+                        </div>
+                    <div class="card-body">
+                        <p class="card-text">هاتف:0103456789 </p>
+                        <p class="card-text">العنوان: مصر القديمه</p>
+                        <p class="card-text">فاكس:00 0000 0000</p>
+                    </div>
+                    </div>
+                </div><!-- col -->
+                <!-- ---------------------------------------------------- -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card" style="width: 400px;">
+                        <div class="card-body d-flex align-items-center">
+                            <h4 class="card-title mb-0" style="position: relative; right:152px; margin-top: 25px;"> روابط مهمة</h4>
+                        </div>
+                    <div class="card-body" style="margin-top: -20px;">
+                        <p class="card-text"> اكتشف اثارنا</p>
+                        <p class="card-text">احجز رحلتك</p>
+                        <p class="card-text">كنوزنا القديمه</p>
+                    </div>
+                    </div>
+                </div><!-- col -->
+                <!-- -------------------------------------------- -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card" style="width: 400px;">
+                        <div class="card-body d-flex align-items-center">
+                            <h4 class="card-title mb-0" style="position: relative; right:150px; margin-top: 25px;"> رؤيتنا</h4>
+                        </div>
+                    <div class="card-body" style="margin-top: -20px;">
+                        <p class="card-text"> ماضينا</p>
+                        <p class="card-text">خطط رحلتك</p>
+                        <p class="card-text">حضارتك تراثنا</p>
+                    </div>
+                    </div>
+                </div><!-- col -->
+            </div><!-- row -->
+        </div><!-- container-fluid-->
+            <p class=" py-2 text-light mt-5" style="position: relative; top: 24px; background-color: rgb(172 97 17 / 78%);">  جميع الحقوق محفوظة©<bdi>2025</bdi> شركة  <bdi><a href="#">Pharaohs</a></bdi> </p>
+    </footer>
+<!-- End Footer -->
+
+    
+
+
+    <!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
